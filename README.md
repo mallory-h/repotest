@@ -12,3 +12,9 @@ Each commit, contains a complete snapshot of project
 git add .
 git commit -m "xxx"
 git push 
+
+.gitignore
+- add certain files
+- *.log or patterns
+so that those files don't get added to the commit
+
