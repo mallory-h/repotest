@@ -18,3 +18,12 @@ git push
 - *.log or patterns
 so that those files don't get added to the commit
 
+git ls-files: shows the files in your staging area. they don't go away when you commit, the commit just becomes up to date
+
+git rm: removes file from working and staging area
+     --cached              only remove from the index, the "index is the staging area for git"
+
+
+git diff --staged: shows what changes have been made since last commit and are in the staged area
+
+git diff : shows what changes are in the working directory have been made but aren't in the staging area
