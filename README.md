@@ -29,3 +29,7 @@ git diff --staged: shows what changes have been made since last commit and are i
 git diff : shows what changes are in the working directory have been made but aren't in the staging area
 
 git HEAD: basically just the branch that we are currently on.
+
+
+Have to do the merging from the master branch:
+git merge <branch_name>
