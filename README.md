@@ -36,3 +36,9 @@ git merge <branch_name>
 
 
 Git merge will combine multiple sequences of commits into one unified history. In the most frequent use cases, git merge is used to combine two branches.
+
+
+Git pull origin branch: you pull all the changes that have been pushed for that branch
+then you need to 
+git push origin main: to push those changes to the remote repo.
+
