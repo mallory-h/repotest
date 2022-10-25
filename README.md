@@ -27,3 +27,7 @@ git rm: removes file from working and staging area
 git diff --staged: shows what changes have been made since last commit and are in the staged area
 
 git diff : shows what changes are in the working directory have been made but aren't in the staging area
+
+
+Have to do the merging from the master branch:
+git merge <branch_name>
