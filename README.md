@@ -33,3 +33,6 @@ git HEAD: basically just the branch that we are currently on.
 
 Have to do the merging from the master branch:
 git merge <branch_name>
+
+
+Git merge will combine multiple sequences of commits into one unified history. In the most frequent use cases, git merge is used to combine two branches.
