@@ -1,0 +1,39 @@
+{{ if .Values.enabled }}
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-gcp-pubsub
+spec:
+  package: xpkg.upbound.io/upbound/provider-gcp-pubsub:v0.36.0 # repository=https://github.com/upbound/provider-gcp
+  controllerConfigRef:
+    name: controller-config-gcp
+
+---
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-gcp-container
+spec:
+  package: xpkg.upbound.io/upbound/provider-gcp-container:v0.36.0 # repository=https://github.com/upbound/provider-gcp
+  controllerConfigRef:
+    name: controller-config-gcp
+
+---
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-gcp-compute
+spec:
+  package: xpkg.upbound.io/upbound/provider-gcp-compute:v0.36.0 # repository=https://github.com/upbound/provider-gcp
+  controllerConfigRef:
+    name: controller-config-gcp
+
+---
+apiVersion: pkg.crossplane.io/v1alpha1
+kind: ControllerConfig
+metadata:
+  name: controller-config-gcp
+spec:
+  args:
+    - --enable-management-policies
+{{- end }}
