@@ -1,3 +1,3 @@
-module github.com/malloryhrhill-1210/greetings
+module repo-test
 
-go 1.19
+go 1.21.1
