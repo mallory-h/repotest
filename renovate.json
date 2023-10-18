@@ -6,7 +6,7 @@
   "kubernetes": {
     "fileMatch": [
       "k8s/.+\\.yaml$",
-      "crossplane-.+-provider/.+/provider.yaml$"
+      "crossplane-gcp-provider/.+/provider.yaml$"
     ]
   }
 }
