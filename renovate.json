@@ -4,6 +4,9 @@
     "config:base"
   ],
   "kubernetes": {
-    "fileMatch": ["k8s/.+\\.yaml$"]
+    "fileMatch": [
+      "k8s/.+\\.yaml$",
+      "crossplane-.+-provider/.+/provider.yaml$"
+    ]
   }
 }
