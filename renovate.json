@@ -11,8 +11,10 @@
       "crossplane-gcp-provider/.+/provider\\.yaml$"
     ],
     "matchStrings": [
-      "^package: .*?:(?<currentValue>.*)? # repository=(?<depName>.*)\\n"
+      "^package: (?<depName>.*?):(?<currentValue>v\\d+\\.\\d+\\.\\d+) # repository=(?<lookupName>.*)\\n"
     ],
+    
+    "matchStringsStrategy": "any",
     "datasourceTemplate": "git-tags"
   }
   ]
