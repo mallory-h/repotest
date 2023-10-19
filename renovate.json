@@ -4,8 +4,9 @@
   "extends": [
     "config:base"
   ],
-  "kubernetes": {
-    "fileMatch": [
+  "regexManagers": [
+    
+    {"fileMatch": [
       "k8s/.+\\.yaml$",
       "crossplane-gcp-provider/.+/provider\\.yaml$"
     ],
@@ -15,5 +16,6 @@
 
     "datasourceTemplate": "git-tags"
   }
+  ]
 
 }
