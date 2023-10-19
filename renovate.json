@@ -11,7 +11,7 @@
       "crossplane-gcp-provider/.+/provider\\.yaml$"
     ],
     "matchStrings": [
-      "^package: (?<depName>.*?):(?<currentValue>v\\d+\\.\\d+\\.\\d+) # repository=(?<lookupName>.*)\\n"
+      "package: xpkg\\.upbound\\.io\\/upbound\\/provider-gcp-container:v0\\.36\\.0 # repository=https:\\/\\/github\\.com\\/upbound\\/provider-gcp"
     ],
     
     "matchStringsStrategy": "any",
