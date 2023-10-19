@@ -1,3 +1,4 @@
+
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
@@ -7,6 +8,12 @@
     "fileMatch": [
       "k8s/.+\\.yaml$",
       "crossplane-gcp-provider/.+/provider\\.yaml$"
-    ]
+    ],
+    "matchStrings": [
+      "package: \"[A-Z]+:(?<currentValue>.*?) # repository=(?<depName>.*?)\\n"
+    ],
+
+    "datasourceTemplate": "git-tags"
   }
+
 }
