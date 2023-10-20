@@ -14,7 +14,7 @@ kind: Provider
 metadata:
   name: provider-gcp-container
 spec:
-  package: xpkg.upbound.io/upbound/provider-gcp-container:v0.36.0 # repository=https://github.com/upbound/provider-gcp
+  package: xpkg.upbound.io/upbound/provider-gcp-container:v0.37.0 # repository=https://github.com/upbound/provider-gcp
   controllerConfigRef:
     name: controller-config-gcp
 
