@@ -4,5 +4,5 @@ kind: Provider
 metadata:
   name: provider-helm
 spec:
-  package: crossplanecontrib/provider-helm:v0.15.0 # repository=https://github.com/crossplane-contrib/provider-helm
+  package: crossplanecontrib/provider-helm:v0.10.0 # repository=https://github.com/crossplane-contrib/provider-helm
 {{- end }}
