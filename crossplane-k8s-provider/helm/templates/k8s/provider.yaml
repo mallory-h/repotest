@@ -4,5 +4,5 @@ kind: Provider
 metadata:
   name: provider-kubernetes
 spec:
-  package: crossplanecontrib/provider-kubernetes:v0.8.0 # repository=https://github.com/crossplane-contrib/provider-kubernetes
+  package: crossplanecontrib/provider-kubernetes:v0.9.0 # repository=https://github.com/crossplane-contrib/provider-kubernetes
 {{- end }}
