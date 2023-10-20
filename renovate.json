@@ -11,7 +11,7 @@
       "crossplane-gcp-provider/.+/provider\\.yaml$"
     ],
     "matchStrings": [
-      "package: (?<beforeColon>[^:]*):(?<currentValue>v\\d\\.\\d+\\.\\d+?) # repository=(?<depName>.*)"
+      "package: (?<beforeColon>[^:]*):(?<currentValue>v\\d\\.\\d+\\.\\d+?) # repository=(?<depName>.*?)"
     ],
     
     "matchStringsStrategy": "any",
