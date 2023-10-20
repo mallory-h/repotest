@@ -8,7 +8,7 @@
     
     {"fileMatch": [
       "k8s/.+\\.yaml$",
-      "crossplane-gcp-provider/.+/provider\\.yaml$"
+      "crossplane-[a-zA-Z]*-provider/.+/provider\\.yaml$"
     ],
     "matchStrings": [
       "package: [^:]*:(?<currentValue>v\\d\\.\\d+\\.\\d+?) # repository=(?<depName>.*)"

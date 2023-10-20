@@ -1,0 +1,8 @@
+{{ if .Values.enabled }}
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-helm
+spec:
+  package: crossplanecontrib/provider-helm:v0.15.0 # repository=https://github.com/crossplane-contrib/provider-helm
+{{- end }}
