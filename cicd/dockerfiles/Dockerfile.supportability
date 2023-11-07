@@ -1,5 +1,5 @@
 # Stage 1: Build the uploader/quark-exporter binary
-FROM golang:1.21.3-bullseye as builder
+FROM golang:1.21.4-bullseye as builder
 
 ENV GOPROXY=https://go.repo.eng.netapp.com
 ENV GOSUMDB=off
