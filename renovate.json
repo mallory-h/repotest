@@ -9,7 +9,7 @@
       ],
       "datasourceTemplate": "docker",
       "matchStrings": [
-        "[A-Z]+_IMAGE=(?<depName>.*?):(?<currentValue>.*?)\\s"
+        "[A-Z]+_IMAGE=(?<depName>.*):(?<currentValue>.*)\\s"
       ]
     }
   ],
