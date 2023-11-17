@@ -2,32 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "timezone": "America/New_York",
   "separateMinorPatch": true,
-  "regexManagers": [
-    {
-      "fileMatch": [
-        "^Makefile$"
-      ],
-      "datasourceTemplate": "docker",
-      "matchStrings": [
-        "[A-Z]+_IMAGE=(?<depName>.*):(?<currentValue>.*)\\s"
-      ]
-    }
-  ],
-  "packageRules": [
-    {
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch",
-        "pin",
-        "digest"
-      ],
-      "automerge": true,
-      "automergeType": "branch",
-      "automergeStrategy": "fast-forward"
-    }
-  ],
-  "extends": [
-    "group:kubernetes"
-  ]
+  "dockerfile": {
+    "enabled": true
+  }
 }
