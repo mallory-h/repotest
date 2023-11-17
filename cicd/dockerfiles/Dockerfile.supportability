@@ -1,53 +1,26 @@
-# Stage 1: Build the uploader/quark-exporter binary
-FROM golang:1.21.3-bullseye as builder
 
-ENV GOPROXY=https://go.repo.eng.netapp.com
-ENV GOSUMDB=off
 
-COPY uploader-go/uploader /src/uploader
-COPY supportability/quark.netapp.io/quark-exporter /src/quark-exporter
-
-# Build the uploader binary
-WORKDIR /src/uploader
-
-RUN go mod download
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO111MODULE=on go build -a -o bin/uploader ./cmd/*.go
-
-# Build the quark-exporter binary
-WORKDIR /src/quark-exporter
-RUN go mod download
-
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO111MODULE=on go test ./...
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO111MODULE=on go build -a -o bin/quark-exporter ./cmd/*.go
 
 # Stage 2: Build the final supportability image
-FROM alpine:3.18
+# FROM docker.repo.eng.netapp.com/chainguard/python@sha256:b462e3e5a572225ed3d89e92c6eee6a41ba4bd2058612130494979f9bdab162f as python_apk
+FROM docker.repo.eng.netapp.com/chainguard/python:3.9.16-dev as python_apk
 
 LABEL vendor="NetApp Inc"
 LABEL version="1.0"
 LABEL description="Quark supportability container"
 
-ARG site=openlab
-COPY site/${site}/apk/repositories /etc/apk/repositories
 
 RUN apk add --no-cache net-tools procps iproute2 python3
 
-ENV PATH="/usr/local/bin:${PATH}"
 
 WORKDIR /supportability
+# FROM docker.repo.eng.netapp.com/chainguard/python@sha256:14b01460efdfb42b298cbb31807ed235d2661bfe576b849fce59614818302301
+FROM docker.repo.eng.netapp.com/chainguard/python:3.9.16
 
 #binary will be at /supportability/bin/uploader
 #binary will be at /supportability/bin/quark-exporter
-COPY --from=builder /src/uploader/bin/uploader ./bin/uploader
-COPY --from=builder /src/quark-exporter/bin/quark-exporter ./bin/quark-exporter
 
-COPY supportability/start_container.sh .
-COPY dmap-bin/ /usr/local/bin/
-COPY supportability/on_crash/crash_manifest.xml .
+COPY --from=python_apk /sbin/ss /usr/local/bin/
+COPY --from=python_apk /bin/df /usr/local/bin/
+COPY --from=python_apk /bin/netstat /usr/local/bin/
 
-RUN ln -s /supportability/start_container.sh /usr/local/bin/start_container \
-    && ln -s /supportability/bin/quark-exporter /usr/local/bin/quark_exporter
-
-
-
-RUN echo "export PS1='\u@supportability:\w\$ '" >> /root/.bashrc
