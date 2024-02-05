@@ -1,0 +1,16 @@
+# Install gcov2lcov and copy scripts
+FROM golang:latest
+# Install gcov2lcov
+# This tool is used to convert gcov coverage reports to lcov format
+RUN go install github.com/jandelgado/gcov2lcov@v1.0.6
+
+# Update the PATH environment variable to include gcov2lcov install path
+ENV PATH="/root/go/bin:${PATH}"
+
+# Copy the textfmt.sh
+COPY scripts/textfmt.sh .
+
+# Make the script executable
+RUN chmod +x textfmt.sh
+
+# ENTRYPOINT [ "./textfmt.sh" ]
