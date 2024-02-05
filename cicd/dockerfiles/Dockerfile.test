@@ -2,7 +2,7 @@
 FROM golang:latest
 # Install gcov2lcov
 # This tool is used to convert gcov coverage reports to lcov format
-ENV GCOV2LCOV=github.com/jandelgado/gcov2lcov@v1.0.6
+ENV GCOV2LCOV=github.com/jandelgado/gcov2lcov@v1.0.4
 RUN go install ${GCOV2LCOV}
 
 # Update the PATH environment variable to include gcov2lcov install path
