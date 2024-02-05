@@ -5,16 +5,9 @@
   "dockerfile": {
     "enabled": true
   },
-  
-  "golang": [
-    {
-      "fileMatch": [
-        "^cicd/dockerfiles/Dockerfile.test$"
-      ],
-      "datasourceTemplate": "go"
-    }
-
-  ]
+  "golang": {
+    "fileMatch": ["^cicd/dockerfiles/Dockerfile.test$"]
+  }
 
 }
 
