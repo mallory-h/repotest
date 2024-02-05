@@ -4,5 +4,20 @@
   "separateMinorPatch": true,
   "dockerfile": {
     "enabled": true
-  }
+  },
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "^cicd/dockerfiles/Dockerfile.test$"
+      ],
+      "matchStrings": [
+        
+        "GCOV2LCOV=(?<depName>.*?)@(?<currentValue>.*?)\\n"
+      ],
+      "datasourceTemplate": "git-tags"
+    }
+
+  ]
+
 }
+
