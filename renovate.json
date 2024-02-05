@@ -5,7 +5,7 @@
   "dockerfile": {
     "enabled": true
   },
-  "golang": {
+  "gomod": {
     "fileMatch": ["^cicd/dockerfiles/Dockerfile.test$"]
   }
 
