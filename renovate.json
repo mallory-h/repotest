@@ -5,7 +5,7 @@
   "dockerfile": {
     "enabled": true
   },
-  "regexManagers": [
+  "customManagers": [
     {
       "fileMatch": [
         "^cicd/dockerfiles/Dockerfile.test$"
