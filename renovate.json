@@ -5,9 +5,17 @@
   "dockerfile": {
     "enabled": true
   },
-  "gomod": {
-    "fileMatch": ["^cicd/dockerfiles/Dockerfile.test$"]
-  }
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "^cicd/dockerfiles/Dockerfile$"
+      ],
+      "matchStrings": [
+        ".*=(?<depName>.*?)@(?<currentValue>.*?)\\n"
+      ],
+      "datasourceTemplate": "go"
+    }
+]
 
 }
 
