@@ -5,7 +5,8 @@
   "dockerfile": {
     "enabled": true
   },
-  "customManagers": [
+  
+  "golang": [
     {
       "fileMatch": [
         "^cicd/dockerfiles/Dockerfile.test$"
