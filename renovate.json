@@ -14,7 +14,7 @@
         
         "GCOV2LCOV=(?<depName>.*?)@(?<currentValue>.*?)\\n"
       ],
-      "datasourceTemplate": "github-tags"
+      "datasourceTemplate": "docker"
     }
 
   ]
