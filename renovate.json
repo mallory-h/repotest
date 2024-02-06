@@ -11,7 +11,7 @@
         "^cicd/dockerfiles/Dockerfile.test$"
       ],
       "matchStrings": [
-          "# dependency=(?<depName>.*?)\\n.*@(?<currentValue>.*?)\\n"
+          "# depName=(?<depName>.*?)\\n.*@(?<currentValue>.*?)\\n"
 
       ],
       "datasourceTemplate": "go"
