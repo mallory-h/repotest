@@ -11,7 +11,7 @@
         "^cicd/dockerfiles/Dockerfile$"
       ],
       "matchStrings": [
-        ".*=(?<depName>.*?)@(?<currentValue>.*?)\\n"
+        "GCOV2LCOV.*=(?<depName>.*?)@(?<currentValue>.*?)\\n"
       ],
       "datasourceTemplate": "go"
     }
