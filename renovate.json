@@ -8,10 +8,10 @@
   "regexManagers": [
     {
       "fileMatch": [
-        "^cicd/dockerfiles/Dockerfile$"
+        "^cicd/dockerfiles/Dockerfile.test$"
       ],
       "matchStrings": [
-        "GCOV2LCOV=(?<depName>.*?)@(?<currentValue>.*?)\\n"
+        ".*=(?<depName>.*?)@(?<currentValue>.*?)\\n"
       ],
       "datasourceTemplate": "go"
     }
