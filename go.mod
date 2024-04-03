@@ -1,6 +1,6 @@
 module repo-test
 
-go 1.21.1
+go 1.21.9
 
 github.com/google/gofuzz v1.2.0 // indirect
 github.com/google/uuid v1.3.0
