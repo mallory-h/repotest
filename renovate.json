@@ -34,6 +34,14 @@
       "enabled": false
     },
     {
+      "groupName": "kubernetes packages (minor updates)",
+      "groupSlug": "kubernetes-go-minor",
+      "matchUpdateTypes": ["minor"],
+      "matchDatasources": ["go"],
+      "matchPackagePrefixes": ["k8s.io"],
+      "enabled": true
+    },
+    {
       "groupName": "golang packages",
       "groupSlug": "go-golang",
       "matchDatasources": [
