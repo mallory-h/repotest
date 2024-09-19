@@ -46,9 +46,7 @@
       "groupSlug": "go-golang",
       "matchDatasources": [
         "go"
-      ],
-      "automerge": true,
-      "automergeType": "branch"
+      ]
     }
   ]
 
