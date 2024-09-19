@@ -5,6 +5,7 @@
   "dockerfile": {
     "enabled": true
   },
+  "additionalBranchPrefix": "{{parentDir}}-",
   "regexManagers": [
     {
       "fileMatch": [
