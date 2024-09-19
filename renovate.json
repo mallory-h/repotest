@@ -16,7 +16,33 @@
       ],
       "datasourceTemplate": "go"
     }
-]
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "matchDatasources": [
+        "go"
+      ],
+      "groupName": "kubernetes packages",
+      "groupSlug": "kubernetes-go",
+      "matchPackagePrefixes": [
+        "k8s.io"
+      ],
+      "enabled": false
+    },
+    {
+      "groupName": "golang packages",
+      "groupSlug": "go-golang",
+      "matchDatasources": [
+        "go"
+      ],
+      "automerge": true,
+      "automergeType": "branch"
+    }
+  ]
 
 }
 
