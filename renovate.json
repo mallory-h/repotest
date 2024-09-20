@@ -6,7 +6,7 @@
     "enabled": true
   },
   "extends": ["config:recommended", ":dependencyDashboard"],
-  "additionalBranchPrefix": "{{parentDir}}-",
+  "additionalBranchPrefix": "testing-->>>",
   "regexManagers": [
     {
       "fileMatch": [
