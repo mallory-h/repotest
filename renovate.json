@@ -61,8 +61,7 @@
       "separateMajorMinor": false,
       "separateMinorPatch": false,
       "separateMultipleMajor": false,
-      "separateMultipleMinor": false,
-      "separateMultiplePatch": false
+      "separateMultipleMinor": false
     }
   ]
 
