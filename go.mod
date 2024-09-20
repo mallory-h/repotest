@@ -13,7 +13,7 @@ require (
 	github.com/ghodss/yaml v1.0.0
 	github.com/pborman/uuid v1.2.1
 	github.com/pkg/errors v0.9.1
-	github.com/prometheus/client_golang v1.20.3
+	github.com/prometheus/client_golang v1.20.4
 	github.com/sirupsen/logrus v1.9.3
 	golang.org/x/oauth2 v0.23.0
 	golang.org/x/time v0.6.0
@@ -115,9 +115,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.30.4
-	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.30.4
-	k8s.io/apimachinery => k8s.io/apimachinery v0.30.4
-	k8s.io/client-go => k8s.io/client-go v0.30.4
-	k8s.io/code-generator => k8s.io/code-generator v0.30.4
+	k8s.io/api => k8s.io/api v0.30.5
+	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.30.5
+	k8s.io/apimachinery => k8s.io/apimachinery v0.30.5
+	k8s.io/client-go => k8s.io/client-go v0.30.5
+	k8s.io/code-generator => k8s.io/code-generator v0.30.5
 )
