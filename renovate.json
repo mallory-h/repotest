@@ -6,7 +6,7 @@
     "enabled": true
   },
   "baseBranches": [
-    "master",
+    "main",
     "release/DOT"
   ],
   "extends": ["config:recommended", ":dependencyDashboard"],
