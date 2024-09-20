@@ -6,7 +6,7 @@
     "enabled": true
   },
   "baseBranches": [
-    "master",
+    "main",
     "release/DOT"
   ],
   "extends": ["config:recommended", ":dependencyDashboard"],
@@ -53,6 +53,12 @@
       "matchDatasources": [
         "go"
       ]
+    },
+    {
+      "matchBaseBranches": ["release/DOT"],
+      "groupName": "all-updates",
+      "groupSlug": "all-updates",
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"]
     }
   ]
 
