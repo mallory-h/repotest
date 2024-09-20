@@ -5,8 +5,12 @@
   "dockerfile": {
     "enabled": true
   },
+  "baseBranches": [
+    "master",
+    "release/DOT"
+  ],
   "extends": ["config:recommended", ":dependencyDashboard"],
-  "additionalBranchPrefix": "testing-->>>",
+  "additionalBranchPrefix": "{{parentDir}}-",
   "regexManagers": [
     {
       "fileMatch": [
