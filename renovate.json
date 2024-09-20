@@ -9,7 +9,7 @@
     "main",
     "release/DOT"
   ],
-  "extends": ["config:recommended", ":dependencyDashboard"],
+  "extends": ["config:recommended", ":dependencyDashboard", "group:allNonMajor"],
   "additionalBranchPrefix": "{{parentDir}}-",
   "regexManagers": [
     {
@@ -25,6 +25,9 @@
   ],
   "packageRules": [
     {
+      "matchBaseBranches": [
+        "main"
+      ],
       "matchUpdateTypes": [
         "major",
         "minor"
@@ -40,6 +43,9 @@
       "enabled": false
     },
     {
+      "matchBaseBranches": [
+        "main"
+      ],
       "groupName": "kubernetes packages (minor updates)",
       "groupSlug": "kubernetes-go-minor",
       "matchUpdateTypes": ["minor"],
@@ -48,6 +54,9 @@
       "enabled": true
     },
     {
+      "matchBaseBranches": [
+        "main"
+      ],
       "groupName": "golang packages",
       "groupSlug": "go-golang",
       "matchDatasources": [
@@ -55,15 +64,18 @@
       ]
     },
     {
-      "matchBaseBranches": ["release/DOT"],
-      "groupName": "all-updates",
-      "groupSlug": "all-updates",
-      "separateMajorMinor": false,
-      "separateMinorPatch": false,
-      "separateMultipleMajor": false,
-      "separateMultipleMinor": false,
-      "branchName": "renovate/release-updates"
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "matchBaseBranches": ["release/DOT"]
     }
+
   ]
 
 }
