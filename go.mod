@@ -18,11 +18,11 @@ require (
 	golang.org/x/oauth2 v0.23.0
 	golang.org/x/time v0.6.0
 	google.golang.org/api v0.198.0
-	k8s.io/api v0.30.5
-	k8s.io/apiextensions-apiserver v0.30.5
-	k8s.io/apimachinery v0.30.5
-	k8s.io/client-go v0.30.5
-	k8s.io/code-generator v0.30.5
+	k8s.io/api v0.31.1
+	k8s.io/apiextensions-apiserver v0.31.1
+	k8s.io/apimachinery v0.31.1
+	k8s.io/client-go v0.31.1
+	k8s.io/code-generator v0.31.1
 )
 
 require (
@@ -115,9 +115,9 @@ require (
 )
 
 replace (
-	k8s.io/api => k8s.io/api v0.30.5
-	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.30.5
-	k8s.io/apimachinery => k8s.io/apimachinery v0.30.5
-	k8s.io/client-go => k8s.io/client-go v0.30.5
-	k8s.io/code-generator => k8s.io/code-generator v0.30.5
+	k8s.io/api => k8s.io/api v0.31.1
+	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.31.1
+	k8s.io/apimachinery => k8s.io/apimachinery v0.31.1
+	k8s.io/client-go => k8s.io/client-go v0.31.1
+	k8s.io/code-generator => k8s.io/code-generator v0.31.1
 )
