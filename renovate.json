@@ -61,7 +61,8 @@
       "separateMajorMinor": false,
       "separateMinorPatch": false,
       "separateMultipleMajor": false,
-      "separateMultipleMinor": false
+      "separateMultipleMinor": false,
+      "branchName": "renovate/release-updates"
     }
   ]
 
