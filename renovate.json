@@ -58,7 +58,6 @@
       "matchBaseBranches": ["release/DOT"],
       "groupName": "all-updates",
       "groupSlug": "all-updates",
-      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
       "separateMajorMinor": false,
       "separateMinorPatch": false,
       "separateMultipleMajor": false,
