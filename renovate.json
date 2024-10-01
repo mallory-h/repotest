@@ -21,9 +21,6 @@
   ],
   "packageRules": [
     {
-      "matchBaseBranches": [
-        "main"
-      ],
       "groupName": "golang packages",
       "groupSlug": "go-golang",
       "matchDatasources": [
@@ -31,8 +28,8 @@
       ]
     },
     {
-      "matchPackageNames": ["toolchain"],
-      "matchDatasources": ["go"],
+      "matchDepTypes": ["toolchain"],
+      "matchDatasources": ["golang-version"],
       "enabled": true,
       "groupName": "toolchain"
     }
