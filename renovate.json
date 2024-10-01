@@ -61,18 +61,12 @@
         "go"
       ]
     },
-    {
-      "matchPackagePatterns": [
-        "*"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch",
-      "matchBaseBranches": ["release/DOT"]
-    }
+      {
+        "matchPackageNames": ["toolchain"],
+        "matchDatasources": ["go"],
+        "enabled": true,
+        "groupName": "toolchain"
+      }
 
   ]
 
