@@ -4,8 +4,7 @@
   "separateMinorPatch": true,
   "enabledMangers": ["dockerfile"],
   "baseBranches": [
-    "main",
-    "release/DOT"
+    "main"
   ],
   "extends": ["config:recommended", ":dependencyDashboard", "group:allNonMajor"],
   "additionalBranchPrefix": "{{parentDir}}-",
@@ -22,35 +21,6 @@
     }
   ],
   "packageRules": [
-    {
-      "matchBaseBranches": [
-        "main"
-      ],
-      "matchUpdateTypes": [
-        "major",
-        "minor"
-      ],
-      "matchDatasources": [
-        "go"
-      ],
-      "groupName": "kubernetes packages",
-      "groupSlug": "kubernetes-go",
-      "matchPackagePrefixes": [
-        "k8s.io"
-      ],
-      "enabled": false
-    },
-    {
-      "matchBaseBranches": [
-        "main"
-      ],
-      "groupName": "kubernetes packages (minor updates)",
-      "groupSlug": "kubernetes-go-minor",
-      "matchUpdateTypes": ["minor"],
-      "matchDatasources": ["go"],
-      "matchPackagePrefixes": ["k8s.io"],
-      "enabled": true
-    },
     {
       "matchBaseBranches": [
         "main"
