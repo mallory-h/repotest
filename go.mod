@@ -4,8 +4,6 @@ go 1.22.4
 
 toolchain go1.22.7
 
-replace netapp.com/global/quark/etcd-operator => ./etcd-operator
-
 require (
 	cloud.google.com/go/compute v1.28.1
 	cloud.google.com/go/compute/metadata v0.5.2
@@ -68,7 +66,7 @@ require (
 	k8s.io/component-helpers v0.31.0
 	k8s.io/kubernetes v1.30.5
 	k8s.io/utils v0.0.0-20240921022957-49e7df575cb6
-	netapp.com/global/quark/etcd-operator v0.0.0-00010101000000-000000000000
+
 	sigs.k8s.io/controller-runtime v0.19.0
 	sigs.k8s.io/yaml v1.4.0
 )
