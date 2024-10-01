@@ -2,7 +2,7 @@ module quark.netapp.io/volume-controller
 
 go 1.22.4
 
-toolchain go1.22.7
+toolchain go1.22.8
 
 replace netapp.com/global/quark/etcd-operator => ./etcd-operator
 
