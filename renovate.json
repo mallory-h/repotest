@@ -25,7 +25,7 @@
       ],
       "datasourceTemplate": "docker",
       "depNameTemplate": "nginx",
-      "versioningTemplate": "docker",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.x$",
       "extractVersionTemplate": "nginx-(?<version>\\d+\\.\\d+\\.x)"
     }
   ],
