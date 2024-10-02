@@ -2,7 +2,7 @@ module quark.netapp.io/volume-controller
 
 go 1.22.4
 
-toolchain go1.22.7
+toolchain go1.22.8
 
 require (
 	cloud.google.com/go/compute v1.28.1
