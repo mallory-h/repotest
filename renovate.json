@@ -32,7 +32,7 @@
       "matchDatasources": ["golang-version"],
       "enabled": true,
       "groupName": "toolchain",
-      "additionalBranchPrefix": ["toolchain-test"],
+      "additionalBranchPrefix": ["toolchain-test"]
     }
 
   ]
