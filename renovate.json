@@ -11,7 +11,7 @@
     {
       "fileMatch": ["^Makefile$"],
       "matchStrings": [
-        "NGINX_IMAGE=(?<currentValue>\\d+\\.\\d+)"
+        "NGINX_IMAGE=.*:(?<currentValue>\\d+\\.\\d+)"
       ],
       "depNameTemplate": "nginx",
       "datasourceTemplate": "docker"
