@@ -9,6 +9,7 @@
   ],
   "extends": ["config:recommended", ":dependencyDashboard", "group:allNonMajor"],
   "additionalBranchPrefix": "{{parentDir}}-",
+  "recreateWhen": "always",
   "regexManagers": [
     {
       "fileMatch": ["^Makefile$"],
