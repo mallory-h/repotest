@@ -39,7 +39,7 @@
       "groupName": "kubernetes packages",
       "groupSlug": "kubernetes-go",
       "matchPackagePrefixes": [
-        "k8s.io"
+        "^k8s.io$"
       ],
       "enabled": false
     },
