@@ -24,7 +24,7 @@
         "golangCiToolsTemplate\\s*=\\s*\"nginx-(?<currentValue>\\d+\\.\\d+\\.x)\"\\s*//\\s*docker\\.io/nginx=(?<currentVersion>\\d+\\.\\d+)"
       ],
       "datasourceTemplate": "docker",
-      "depNameTemplate": "library/nginx",
+      "depNameTemplate": "nginx",
       "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.x$",
       "extractVersionTemplate": "nginx-(?<version>\\d+\\.\\d+\\.x)"
     }
