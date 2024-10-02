@@ -24,7 +24,7 @@
         "// POD TEMPLATES\\n.*= \"nginx-(?<currentValue>\\d+\\.\\d+\\.x)\" // (?<depName>.*)\\n"
       ],
       "datasourceTemplate": "docker",
-      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
+      "extractVersionTemplate": "nginx-(?<version>\\d+\\.\\d+\\.x)"
     }
   ],
   "packageRules": [
