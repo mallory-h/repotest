@@ -23,7 +23,8 @@
       "matchStrings": [
         "// POD TEMPLATES\\n.*= \"nginx-(?<currentValue>\\d+\\.\\d+\\.x)\" // (?<depName>.*)\\n"
       ],
-      "datasourceTemplate": "docker"
+      "datasourceTemplate": "docker",
+      "replaceString": "nginx-${version}"
     }
   ],
   "packageRules": [
@@ -40,6 +41,21 @@
       "enabled": true,
       "groupName": "toolchain",
       "additionalBranchPrefix": ["toolchain-test"]
+    },
+    {
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "matchDatasources": [
+        "go"
+      ],
+      "groupName": "kubernetes packages",
+      "groupSlug": "kubernetes-go",
+      "matchPackagePrefixes": [
+        "k8s.io"
+      ],
+      "enabled": false
     }
 
   ]

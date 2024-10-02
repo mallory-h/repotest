@@ -252,6 +252,7 @@ require (
 )
 
 replace (
+	k8s.io/apiserver => k8s.io/apiserver v0.30.5
 	k8s.io/cloud-provider => k8s.io/cloud-provider v0.30.5
 	k8s.io/cluster-bootstrap => k8s.io/cluster-bootstrap v0.30.5
 	k8s.io/controller-manager => k8s.io/controller-manager v0.30.5
