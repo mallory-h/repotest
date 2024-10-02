@@ -21,10 +21,10 @@
     {
       "fileMatch": ["^cicd/jenkinsfiles/Jenkinsfile.test$"],
       "matchStrings": [
-        "golangCiToolsTemplate\\s*=\\s*\"nginx-(?<currentValue>\\d+\\.\\d+\\.x)\""
+        "golangCiToolsTemplate\\s*=\\s*\"nginx-(?<currentValue>\\d+\\.\\d+\\.x)\"\\s*//\\s*docker\\.io/nginx=(?<currentVersion>\\d+\\.\\d+)"
       ],
       "datasourceTemplate": "docker",
-      "depNameTemplate": "nginx",
+      "depNameTemplate": "library/nginx",
       "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.x$",
       "extractVersionTemplate": "nginx-(?<version>\\d+\\.\\d+\\.x)"
     }
