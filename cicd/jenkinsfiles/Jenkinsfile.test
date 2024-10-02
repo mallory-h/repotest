@@ -1,4 +1,4 @@
 //POD TEMPLATES
-def golangCiToolsTemplate = "nginx-1.26.x" // docker.io/nginx=1.26.1
+def golangCiToolsTemplate = "nginx-1.27.x" // docker.io/nginx=1.27.1
 
 //
