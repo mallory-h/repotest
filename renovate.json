@@ -29,20 +29,6 @@
   ],
   "packageRules": [
     {
-      "groupName": "golang packages",
-      "groupSlug": "go-golang",
-      "matchDatasources": [
-        "go"
-      ]
-    },
-    {
-      "matchDepTypes": ["toolchain"],
-      "matchDatasources": ["golang-version"],
-      "enabled": true,
-      "groupName": "toolchain",
-      "additionalBranchPrefix": ["toolchain-test"]
-    },
-    {
       "matchUpdateTypes": [
         "major",
         "minor"
@@ -56,6 +42,20 @@
         "k8s.io"
       ],
       "enabled": false
+    },
+    {
+      "groupName": "golang packages",
+      "groupSlug": "go-golang",
+      "matchDatasources": [
+        "go"
+      ]
+    },
+    {
+      "matchDepTypes": ["toolchain"],
+      "matchDatasources": ["golang-version"],
+      "enabled": true,
+      "groupName": "toolchain",
+      "additionalBranchPrefix": ["toolchain-test"]
     }
 
   ]
