@@ -24,6 +24,7 @@
         "def golangCiToolsTemplate =\"nginx-(?<currentValue>\\d+\\.\\d+\\.x)\""
       ],
       "datasourceTemplate": "docker",
+      "depName": "nginx",
       "extractVersionTemplate": "nginx-(?<version>\\d+\\.\\d+\\.x)"
     }
   ],
