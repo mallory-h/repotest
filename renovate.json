@@ -13,6 +13,7 @@
       "matchStrings": [
         "NGINX_VERSION=(?<currentValue>\\d+\\.\\d+)"
       ],
+      "depNameTemplate": "nginx",
       "datasourceTemplate": "docker"
     },
     {
