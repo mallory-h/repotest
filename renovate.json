@@ -43,7 +43,8 @@
     {
       "groupName":"tools update",
       "groupSlug": "tools-update",
-      "matchDepNames": ["nginx"]
+      "matchDepNames": ["nginx"],
+      "matchPackageNames": ["nginx"]
     },
     {
       "matchUpdateTypes": [
