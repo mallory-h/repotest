@@ -31,7 +31,8 @@
       "matchDepTypes": ["toolchain"],
       "matchDatasources": ["golang-version"],
       "enabled": true,
-      "groupName": "toolchain"
+      "groupName": "toolchain",
+      "additionalBranchPrefix": ["toolchain-test"],
     }
 
   ]
