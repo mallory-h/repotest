@@ -9,6 +9,13 @@
   "additionalBranchPrefix": "{{parentDir}}-",
   "regexManagers": [
     {
+      "fileMatch": ["^Makefile$"],
+      "matchStrings": [
+        "NGINX_VERSION=(?<currentValue>\\d+\\.\\d+)"
+      ],
+      "datasourceTemplate": "docker"
+    },
+    {
       "fileMatch": [
         "^cicd/dockerfiles/Dockerfile.test$"
       ],
@@ -29,6 +36,11 @@
     }
   ],
   "packageRules": [
+    {
+      "groupName":"tools update",
+      "groupSlug": "tools-update",
+      "matchDepNames": ["nginx"]
+    },
     {
       "matchUpdateTypes": [
         "major",
