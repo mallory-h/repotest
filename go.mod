@@ -2,7 +2,7 @@ module repotest
 
 go 1.22.4
 
-toolchain go1.22.8
+toolchain go1.23.2
 
 replace (
 	k8s.io/api => k8s.io/api v0.30.5
