@@ -22,7 +22,7 @@ replace (
 	k8s.io/csi-translation-lib => k8s.io/csi-translation-lib v0.30.5
 	k8s.io/dynamic-resource-allocation => k8s.io/dynamic-resource-allocation v0.30.5
 	k8s.io/endpointslice => k8s.io/endpointslice v1.28.5
-	k8s.io/gengo/v2 => k8s.io/gengo/v2 v2.0.0-20240228010128-51d4e06bde70
+	k8s.io/gengo/v2 => k8s.io/gengo/v2 v2.0.0-20240911193312-2b36238f13e9
 	k8s.io/klog/v2 => k8s.io/klog/v2 v2.130.1
 	k8s.io/kube-aggregator => k8s.io/kube-aggregator v0.30.5
 	k8s.io/kube-controller-manager => k8s.io/kube-controller-manager v0.30.5
@@ -41,8 +41,8 @@ replace (
 	oras.land/oras-go => oras.land/oras-go v1.2.5
 	sigs.k8s.io/controller-runtime => sigs.k8s.io/controller-runtime v0.18.5
 	sigs.k8s.io/json => sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd
-	sigs.k8s.io/kustomize/api => sigs.k8s.io/kustomize/api v0.17.2
-	sigs.k8s.io/kustomize/kyaml => sigs.k8s.io/kustomize/kyaml v0.17.1
+	sigs.k8s.io/kustomize/api => sigs.k8s.io/kustomize/api v0.17.3
+	sigs.k8s.io/kustomize/kyaml => sigs.k8s.io/kustomize/kyaml v0.17.2
 	sigs.k8s.io/structured-merge-diff/v4 => sigs.k8s.io/structured-merge-diff/v4 v4.4.1
 	sigs.k8s.io/yaml => sigs.k8s.io/yaml v1.4.0
 )
