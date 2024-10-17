@@ -10,53 +10,5 @@
     "gomod": {
         "enabled": true
     },
-    "recreateWhen": "always",
-    "regexManagers": [
-        {
-            "fileMatch": ["^Makefile$"],
-            "matchStrings": ["NGINX_IMAGE=.*:(?<currentValue>\\d+\\.\\d+)"],
-            "depNameTemplate": "nginx",
-            "datasourceTemplate": "docker"
-        },
-        {
-            "fileMatch": ["^cicd/dockerfiles/Dockerfile.test$"],
-            "matchStrings": [
-                "# depName=(?<depName>.*?)\\n.*@(?<currentValue>.*?)\\n"
-            ],
-            "datasourceTemplate": "go"
-        },
-        {
-            "fileMatch": ["^cicd/jenkinsfiles/Jenkinsfile.test1$"],
-            "matchStrings": [
-                "golangCiToolsTemplate\\s*=\\s*\"nginx-(?<version>\\d+\\.\\d+\\.x)\"\\s*//\\s*docker\\.io/nginx=(?<currentValue>\\d+\\.\\d+)"
-            ],
-            "datasourceTemplate": "docker",
-            "depNameTemplate": "nginx",
-            "versioningTemplate": "docker"
-        }
-    ],
-    "packageRules": [
-        {
-            "groupName": "golang packages",
-            "groupSlug": "go-golang",
-            "matchDatasources": ["go"],
-            "matchManagers": ["gomod"],
-            "matchPackageNames": ["!/^k8s.io\\/.*/", "!/^sigs.k8s.io\\/.*/"]
-        },
-        {
-            "groupName": "kubernetes packages",
-            "groupSlug": "kubernetes-go",
-            "matchDatasources": ["go"],
-            "matchManagers": ["gomod"],
-            "matchPackageNames": ["/^k8s.io\\/.*/", "/^sigs.k8s.io\\/.*/"],
-            "matchUpdateTypes": ["patch"]
-        },
-        {
-            "matchDepTypes": ["toolchain"],
-            "matchDatasources": ["golang-version"],
-            "enabled": true,
-            "groupName": "toolchain",
-            "additionalBranchPrefix": ["toolchain-test"]
-        }
-    ]
+    "recreateWhen": "always"
 }
