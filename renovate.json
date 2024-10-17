@@ -1,83 +1,61 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "timezone": "America/New_York",
-  "separateMinorPatch": true,
-  "prHourlyLimit": 0,
-  "prConcurrentLimit": 0,
-  "baseBranches": [
-    "main"
-  ],
-  "extends": ["config:recommended", ":dependencyDashboard", "group:allNonMajor"],
-  "additionalBranchPrefix": "{{parentDir}}-",
-  "recreateWhen": "always",
-  "regexManagers": [
-    {
-      "fileMatch": ["^Makefile$"],
-      "matchStrings": [
-        "NGINX_IMAGE=.*:(?<currentValue>\\d+\\.\\d+)"
-      ],
-      "depNameTemplate": "nginx",
-      "datasourceTemplate": "docker"
-    },
-    {
-      "fileMatch": [
-        "^cicd/dockerfiles/Dockerfile.test$"
-      ],
-      "matchStrings": [
-          "# depName=(?<depName>.*?)\\n.*@(?<currentValue>.*?)\\n"
-
-      ],
-      "datasourceTemplate": "go"
-    },
-    {
-      "fileMatch": ["^cicd/jenkinsfiles/Jenkinsfile.test1$"],
-      "matchStrings": [
-        "golangCiToolsTemplate\\s*=\\s*\"nginx-(?<version>\\d+\\.\\d+\\.x)\"\\s*//\\s*docker\\.io/nginx=(?<currentValue>\\d+\\.\\d+)"
-      ],
-      "datasourceTemplate": "docker",
-      "depNameTemplate": "nginx",
-      "versioningTemplate": "docker"
-    }
-  ],
-  "packageRules": [
-    {
-      "groupName":"tools update",
-      "groupSlug": "tools-update",
-      "matchDepNames": ["nginx"],
-      "matchPackageNames": ["nginx"],
-      "branchName": "tools-update"
-    },
-    {
-      "matchUpdateTypes": [
-        "major",
-        "minor"
-      ],
-      "matchDatasources": [
-        "go"
-      ],
-      "groupName": "kubernetes packages",
-      "groupSlug": "kubernetes-go",
-      "matchPackageNames": [
-        "k8s.io/**"
-      ],
-      "enabled": false
-    },
-    {
-      "groupName": "golang packages",
-      "groupSlug": "go-golang",
-      "matchDatasources": [
-        "go"
-      ]
-    },
-    {
-      "matchDepTypes": ["toolchain"],
-      "matchDatasources": ["golang-version"],
-      "enabled": true,
-      "groupName": "toolchain",
-      "additionalBranchPrefix": ["toolchain-test"]
-    }
-
-  ]
-
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "timezone": "America/New_York",
+    "separateMinorPatch": true,
+    "prHourlyLimit": 0,
+    "prConcurrentLimit": 0,
+    "baseBranches": ["main"],
+    "extends": [
+        "config:recommended",
+        ":dependencyDashboard",
+        "group:allNonMajor"
+    ],
+    "additionalBranchPrefix": "{{parentDir}}-",
+    "recreateWhen": "always",
+    "regexManagers": [
+        {
+            "fileMatch": ["^Makefile$"],
+            "matchStrings": ["NGINX_IMAGE=.*:(?<currentValue>\\d+\\.\\d+)"],
+            "depNameTemplate": "nginx",
+            "datasourceTemplate": "docker"
+        },
+        {
+            "fileMatch": ["^cicd/dockerfiles/Dockerfile.test$"],
+            "matchStrings": [
+                "# depName=(?<depName>.*?)\\n.*@(?<currentValue>.*?)\\n"
+            ],
+            "datasourceTemplate": "go"
+        },
+        {
+            "fileMatch": ["^cicd/jenkinsfiles/Jenkinsfile.test1$"],
+            "matchStrings": [
+                "golangCiToolsTemplate\\s*=\\s*\"nginx-(?<version>\\d+\\.\\d+\\.x)\"\\s*//\\s*docker\\.io/nginx=(?<currentValue>\\d+\\.\\d+)"
+            ],
+            "datasourceTemplate": "docker",
+            "depNameTemplate": "nginx",
+            "versioningTemplate": "docker"
+        }
+    ],
+    "packageRules": [
+        {
+            "groupName": "golang packages",
+            "groupSlug": "go-golang",
+            "matchDatasources": ["go"],
+            "matchPackageNames": ["!/^k8s.io/", "!/^sigs.k8s.io/"]
+        },
+        {
+            "matchUpdateTypes": ["patch"],
+            "groupName": "kubernetes packages",
+            "groupSlug": "kubernetes-go",
+            "matchDatasources": ["go"],
+            "matchPackageNames": ["/^k8s.io/", "/^sigs.k8s.io/"]
+        },
+        {
+            "matchDepTypes": ["toolchain"],
+            "matchDatasources": ["golang-version"],
+            "enabled": true,
+            "groupName": "toolchain",
+            "additionalBranchPrefix": ["toolchain-test"]
+        }
+    ]
 }
-
