@@ -36,7 +36,7 @@ replace (
 	k8s.io/metrics => k8s.io/metrics v0.30.5
 	k8s.io/mount-utils => k8s.io/mount-utils v0.30.5
 	k8s.io/pod-security-admission => k8s.io/pod-security-admission v0.30.5
-	k8s.io/sample-apiserver => k8s.io/sample-apiserver v0.30.5
+	k8s.io/sample-apiserver => k8s.io/sample-apiserver v0.31.1
 	k8s.io/utils => k8s.io/utils v0.0.0-20240902221715-702e33fdd3c3
 	oras.land/oras-go => oras.land/oras-go v1.2.5
 	sigs.k8s.io/controller-runtime => sigs.k8s.io/controller-runtime v0.18.5
