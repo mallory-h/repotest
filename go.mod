@@ -285,7 +285,7 @@ replace (
 	k8s.io/utils => k8s.io/utils v0.0.0-20240902221715-702e33fdd3c3
 	oras.land/oras-go => oras.land/oras-go v1.2.5
 	sigs.k8s.io/controller-runtime => sigs.k8s.io/controller-runtime v0.18.5
-	sigs.k8s.io/json => sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd
+	sigs.k8s.io/json => sigs.k8s.io/json cfa47c3a1cc8
 	sigs.k8s.io/kustomize/api => sigs.k8s.io/kustomize/api v0.17.2
 	sigs.k8s.io/kustomize/kyaml => sigs.k8s.io/kustomize/kyaml v0.17.1
 	sigs.k8s.io/structured-merge-diff/v4 => sigs.k8s.io/structured-merge-diff/v4 v4.4.1
