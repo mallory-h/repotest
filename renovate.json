@@ -7,6 +7,9 @@
     "baseBranches": ["main"],
     "extends": [":dependencyDashboard"],
     "additionalBranchPrefix": "{{parentDir}}-",
+    "gomod": {
+        "enabled": true
+    },
     "recreateWhen": "always",
     "regexManagers": [
         {
