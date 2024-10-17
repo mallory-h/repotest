@@ -36,13 +36,13 @@
         {
             "groupName": "golang packages",
             "groupSlug": "go-golang",
-            "matchDatasources": ["go"],
+            "matchDatasources": ["gomod"],
             "matchPackageNames": ["!/^k8s.io\\/.*/", "!/^sigs.k8s.io\\/.*/"]
         },
         {
             "groupName": "kubernetes packages",
             "groupSlug": "kubernetes-go",
-            "matchDatasources": ["go"],
+            "matchDatasources": ["gomod"],
             "matchPackageNames": ["/^k8s.io\\/.*/", "/^sigs.k8s.io\\/.*/"],
             "matchUpdateTypes": ["patch"]
         },
