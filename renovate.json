@@ -6,7 +6,6 @@
     "prConcurrentLimit": 0,
     "baseBranches": ["main"],
     "extends": [
-        "config:recommended",
         ":dependencyDashboard"
     ],
     "additionalBranchPrefix": "{{parentDir}}-",
