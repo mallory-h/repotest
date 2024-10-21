@@ -17,11 +17,10 @@
             "enabled": false
         },
         {
-            "matchUpdateTypes": ["patch"],
+            "matchUpdateTypes": ["patch", "digest"],
             "groupSlug": "kubernetes-go",
             "matchDatasources": ["go"],
-            "matchPackageNames": ["/^k8s.io/", "/^sigs.k8s.io/"],
-            "enabled": false
+            "matchPackageNames": ["/^k8s.io/", "/^sigs.k8s.io/"]
         }
     ]
 }
