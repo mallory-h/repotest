@@ -27,6 +27,7 @@
             "groupName": "golang packages",
             "groupSlug": "go-golang",
             "matchDatasources": ["go"],
+            "matchUpdateTypes": ["patch", "digest", "minor", "major"],
             "matchPackageNames": ["!/^k8s.io/", "!/^sigs.k8s.io/"]
         }
     ]
