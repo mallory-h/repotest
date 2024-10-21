@@ -26,7 +26,7 @@ replace (
 	k8s.io/klog/v2 => k8s.io/klog/v2 v2.130.1
 	k8s.io/kube-aggregator => k8s.io/kube-aggregator v0.30.5
 	k8s.io/kube-controller-manager => k8s.io/kube-controller-manager v0.30.5
-	k8s.io/kube-openapi => k8s.io/kube-openapi v0.0.0-20240228011516-70dd3763d340
+	k8s.io/kube-openapi => k8s.io/kube-openapi 67ed5848f094
 	k8s.io/kube-proxy => k8s.io/kube-proxy v0.30.5
 	k8s.io/kube-scheduler => k8s.io/kube-scheduler v0.30.5
 	k8s.io/kubectl => k8s.io/kubectl v0.30.5
@@ -37,10 +37,10 @@ replace (
 	k8s.io/mount-utils => k8s.io/mount-utils v0.30.5
 	k8s.io/pod-security-admission => k8s.io/pod-security-admission v0.30.5
 	k8s.io/sample-apiserver => k8s.io/sample-apiserver v0.30.5
-	k8s.io/utils => k8s.io/utils v0.0.0-20240902221715-702e33fdd3c3
+	k8s.io/utils => k8s.io/utils 49e7df575cb6
 	oras.land/oras-go => oras.land/oras-go v1.2.5
 	sigs.k8s.io/controller-runtime => sigs.k8s.io/controller-runtime v0.18.5
-	sigs.k8s.io/json => sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd
+	sigs.k8s.io/json => sigs.k8s.io/json cfa47c3a1cc8
 	sigs.k8s.io/kustomize/api => sigs.k8s.io/kustomize/api v0.17.2
 	sigs.k8s.io/kustomize/kyaml => sigs.k8s.io/kustomize/kyaml v0.17.1
 	sigs.k8s.io/structured-merge-diff/v4 => sigs.k8s.io/structured-merge-diff/v4 v4.4.1
