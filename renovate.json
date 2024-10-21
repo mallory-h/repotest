@@ -26,7 +26,8 @@
         {
             "groupName": "golang packages",
             "groupSlug": "go-golang",
-            "matchDatasources": ["go"]
+            "matchDatasources": ["go"],
+            "matchPackageNames": ["!/^k8s.io/", "!/^sigs.k8s.io/"]
         }
     ]
 }
