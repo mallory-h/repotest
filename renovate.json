@@ -7,5 +7,16 @@
     "baseBranches": ["main"],
     "extends": [":dependencyDashboard"],
     "additionalBranchPrefix": "{{parentDir}}-",
-    "recreateWhen": "always"
-}
+    "recreateWhen": "always",
+
+    "packageRules": [
+      {
+        "matchUpdateTypes": ["major", "minor"],
+        "groupSlug": "kubernetes-go",
+        "matchDatasources": ["go"],
+        "matchPackageNames": ["/^k8s.io/", "/^sigs.k8s.io/"],
+        "enabled": false
+    }
+    ]
+  
+  }
