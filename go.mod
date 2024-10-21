@@ -22,7 +22,7 @@ replace (
 	k8s.io/csi-translation-lib => k8s.io/csi-translation-lib v0.30.5
 	k8s.io/dynamic-resource-allocation => k8s.io/dynamic-resource-allocation v0.30.5
 	k8s.io/endpointslice => k8s.io/endpointslice v1.28.5
-	k8s.io/gengo/v2 => k8s.io/gengo/v2 v2.0.0-20240228010128-51d4e06bde70
+	k8s.io/gengo/v2 => k8s.io/gengo/v2 v2.0.0-20240911193312-2b36238f13e9
 	k8s.io/klog/v2 => k8s.io/klog/v2 v2.130.1
 	k8s.io/kube-aggregator => k8s.io/kube-aggregator v0.30.5
 	k8s.io/kube-controller-manager => k8s.io/kube-controller-manager v0.30.5
