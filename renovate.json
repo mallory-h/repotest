@@ -10,13 +10,18 @@
     "recreateWhen": "always",
 
     "packageRules": [
-      {
-        "matchUpdateTypes": ["major", "minor"],
-        "groupSlug": "kubernetes-go",
-        "matchDatasources": ["go"],
-        "matchPackageNames": ["/^k8s.io/", "/^sigs.k8s.io/"],
-        "enabled": false
-    }
+        {
+            "matchUpdateTypes": ["major", "minor"],
+            "matchDatasources": ["go"],
+            "matchPackageNames": ["/^k8s.io/", "/^sigs.k8s.io/"],
+            "enabled": false
+        },
+        {
+            "matchUpdateTypes": ["patch"],
+            "groupSlug": "kubernetes-go",
+            "matchDatasources": ["go"],
+            "matchPackageNames": ["/^k8s.io/", "/^sigs.k8s.io/"],
+            "enabled": false
+        }
     ]
-  
-  }
+}
