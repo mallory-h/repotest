@@ -19,6 +19,7 @@
         {
             "matchUpdateTypes": ["patch", "digest"],
             "groupSlug": "kubernetes-go",
+            "groupName": "Kubernetes Go",
             "matchDatasources": ["go"],
             "matchPackageNames": ["/^k8s.io/", "/^sigs.k8s.io/"]
         }
