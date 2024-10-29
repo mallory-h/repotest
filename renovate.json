@@ -11,7 +11,7 @@
     "packageRules": [
         {
             "commitMessageTopic": "Testing Testing",
-            "branchName": "renovate/testing",
+            "branchName": "Ratom_sagittaex-{{branchTopic}}",
             "matchBaseBranches": ["release/DOT/Ratom_sagittaex"]
         },
         {
