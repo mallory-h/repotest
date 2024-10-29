@@ -4,9 +4,9 @@
     "separateMinorPatch": true,
     "prHourlyLimit": 0,
     "prConcurrentLimit": 0,
-    "baseBranches": ["main"],
+    "baseBranches": ["main", "release/DOT/Ratom_sagittaex"],
     "extends": [":dependencyDashboard"],
-    "additionalBranchPrefix": "{{parentDir}}-",
+    "additionalBranchPrefix": "Ratom_sag-",
     "recreateWhen": "always",
 
     "packageRules": [
@@ -27,7 +27,6 @@
             "groupName": "golang packages",
             "groupSlug": "go-golang",
             "matchDatasources": ["go"],
-            "matchUpdateTypes": ["patch", "digest", "minor", "major"],
             "matchPackageNames": ["!/^k8s.io/", "!/^sigs.k8s.io/"]
         }
     ]
