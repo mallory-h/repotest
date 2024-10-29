@@ -12,24 +12,27 @@
         {
             "commitMessageTopic": "Testing Testing",
             "commitMessageSuffix": "CQUARK",
-            "branchPrefix": "renovate/Ratom_sagittaex",
-            "matchBaseBranches": ["release/DOT/Ratom_sagittaex"]
+            "branchPrefix": "renovate/Ratom_sagittaex-",
+            "matchBaseBranches": ["release/DOT/Ratom_sagittaex"],
+            "matchUpdateTypes": ["minor", "patch"],
+            "groupSlug": "Release branch updates",
+            "groupName": "Release branch updates"
         },
         {
-            "matchUpdateTypes": ["major", "minor"],
+            "matchUpdateTypes": ["major", "minor", "digest"],
             "matchDatasources": ["go"],
             "matchPackageNames": ["/^k8s.io/", "/^sigs.k8s.io/"],
             "enabled": false
         },
         {
-            "matchUpdateTypes": ["patch", "digest"],
+            "matchUpdateTypes": ["patch"],
             "groupSlug": "kubernetes-go",
-            "groupName": "Kubernetes Go",
+            "groupName": "Kubernetes Go Packages",
             "matchDatasources": ["go"],
             "matchPackageNames": ["/^k8s.io/", "/^sigs.k8s.io/"]
         },
         {
-            "groupName": "golang packages",
+            "groupName": "Golang Packages",
             "groupSlug": "go-golang",
             "matchDatasources": ["go"],
             "matchPackageNames": ["!/^k8s.io/", "!/^sigs.k8s.io/"]
