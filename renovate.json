@@ -10,9 +10,8 @@
 
     "packageRules": [
         {
-            "commitMessageTopic": "Testing Testing",
             "commitMessageSuffix": "CQUARK",
-            "branchPrefix": "renovate/Ratom_sagittaex-",
+            "branchName": "renovate/Ratom_sagittaex",
             "matchBaseBranches": ["release/DOT/Ratom_sagittaex"],
             "matchUpdateTypes": ["minor", "patch"],
             "groupSlug": "Release branch updates",
