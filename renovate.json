@@ -19,6 +19,11 @@
             "groupName": "Release branch updates"
         },
         {
+            "matchUpdateTypes": ["major", "pin", "digest"],
+            "matchBaseBranches": ["release/DOT/Ratom_sagittaex"],
+            "enabled": false
+        },
+        {
             "matchUpdateTypes": ["major", "minor", "digest"],
             "matchDatasources": ["go"],
             "matchPackageNames": ["/^k8s.io/", "/^sigs.k8s.io/"],
