@@ -40,6 +40,13 @@
             "groupSlug": "go-golang",
             "matchDatasources": ["go"],
             "matchPackageNames": ["!/^k8s.io/", "!/^sigs.k8s.io/"]
+        },
+        {
+            "matchDepTypes": ["toolchain"],
+            "matchDatasources": ["golang-version"],
+            "enabled": false,
+            "groupName": "toolchain",
+            "matchUpdateTypes": ["major", "minor"]
         }
     ]
 }
