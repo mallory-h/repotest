@@ -6,11 +6,14 @@
     "prConcurrentLimit": 0,
     "baseBranches": ["main", "release/DOT/Ratom_sagittaex"],
     "extends": [":dependencyDashboard"],
-    "additionalBranchPrefix": "Ratom_sag-",
-    "branchPrefix": "renovate/",
     "recreateWhen": "always",
 
     "packageRules": [
+        {
+            "commitMessageTopic": "Testing Testing",
+            "branchName": "renovate/testing",
+            "matchBaseBranches": ["release/DOT/Ratom_sagittaex"]
+        },
         {
             "matchUpdateTypes": ["major", "minor"],
             "matchDatasources": ["go"],
