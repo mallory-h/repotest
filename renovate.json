@@ -11,7 +11,8 @@
     "packageRules": [
         {
             "commitMessageTopic": "Testing Testing",
-            "branchName": "Ratom_sagittaex-{{branchTopic}}",
+            "commitMessageSuffix": "CQUARK",
+            "branchName": "Ratom_sagittaex-{{branchPrefix}}",
             "matchBaseBranches": ["release/DOT/Ratom_sagittaex"]
         },
         {
