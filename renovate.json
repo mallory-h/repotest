@@ -12,7 +12,7 @@
         {
             "commitMessageTopic": "Testing Testing",
             "commitMessageSuffix": "CQUARK",
-            "branchName": "Ratom_sagittaex-{{branchPrefix}}",
+            "branchPrefix": "renovate/Ratom_sagittaex",
             "matchBaseBranches": ["release/DOT/Ratom_sagittaex"]
         },
         {
