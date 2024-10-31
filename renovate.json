@@ -11,7 +11,7 @@
     "packageRules": [
         {
             "commitMessageSuffix": "CQUARK",
-            "branchName": "renovate/Ratom_sagittaex-{{ $now() }}",
+            "branchName": "renovate/Ratom_sagittaex-$now()",
             "matchBaseBranches": ["release/DOT/Ratom_sagittaex"],
             "matchUpdateTypes": ["minor", "patch"],
             "groupSlug": "Release branch updates",
