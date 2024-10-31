@@ -9,7 +9,7 @@
     "recreateWhen": "always",
     "env": {
         "DATE": "TODAY"
-    }
+    },
 
     "packageRules": [
         {
